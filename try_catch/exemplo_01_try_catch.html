@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript: Exemplo try catch</title>
+		<style type="text/css"></style>
+
+		<script  type="text/javascript">
+			var x = prompt("Entre com um número maior que 0 e menor que 11","");
+
+            try{
+
+                if (x <= 0){
+                    throw{
+                        name: "Erro Javascript",
+                        message: "O número deve ser maior que 0"
+                    }
+                }
+
+                if(x >= 11){
+                    throw{
+                        name: "Erro Javascript",
+                        message: "O número deve ser menor que 11"
+                    }
+                }
+
+                //isNaN: Retorna um valor booliano que indica se um valor é o valor NaN reservado (não é um número).
+                if(isNaN(parseInt(x))){
+
+                    throw{
+                        name: "Erro Javascript",
+                        message: "Entre somente com número maior que 0 e menor que 11"
+                    }
+                }
+
+            }
+            catch(e){
+
+                alert(e.name + "\n" + e.message);
+            }
+
+		</script>
+	</head>
+	<body>
+
+	</body>

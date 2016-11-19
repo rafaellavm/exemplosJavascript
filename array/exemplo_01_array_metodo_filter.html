@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript: Array - Métodos Array - Filter </title>
+    <style type="text/css"></style>
+    <script type="text/javascript">
+
+        // elem: o valor de cada elemento do array
+        // ind: índice de cada elemento
+        // obj: objeto Array sendo percorrido
+
+        // vai filtar todos os elementos maiores ou iguais a 18
+
+        var arr = [21,3,18,"a",290,"b",7];
+
+        function filtrarArray(elem, ind, obj) {
+
+            return (elem >= 18);
+        }
+
+        var resposta = arr.filter(filtrarArray);
+
+        alert(resposta);
+
+    </script>
+</head>
+
+<body> </body>

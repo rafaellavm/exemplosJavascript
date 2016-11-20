@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript: Array - Métodos Array - indexOf </title>
+    <style type="text/css"></style>
+    <script type="text/javascript">
+
+        //percorre cada um dos elementos de um array e executa uma função callback
+        //cada argumento da função representa, respectivamente:
+
+        // elem: o valor de cada elemento do array
+        // ind: índice de cada elemento
+        //obj: objeto Array sendo percorrido
+
+        //indexOf: método criado para retornar o índice do elemento de um array
+        // caso o elemento não exista retorna -1
+
+        var array = [1,2,"a","b","3","c",1,"a","45"];
+
+        //retorna 3 (o índice dele)
+        var a = array.indexOf("b");
+
+        //retorna -1 (pois não tem esse registro no array)
+        var b = array.indexOf(23);
+
+        //índice do primeiro elemento 1 do array começando a busca pelo terceiro elemento
+        //ele começa a contar a partir de 'a' (posição 2), depois pega a posição do primeiro 1 depois dele
+        var c = array.indexOf(1,2);
+
+        //retorna -1 porque não tem o NÚMERO 45 no array
+        var d = array.indexOf(45);
+
+        //colocando 'true' faz a busca sem diferenciar o TIPO de dado, então acha o 45 mesmo ele não sendo um número
+        // resposta: 8 (posição)
+        var e = array.indexOf(3,0,true);
+
+        alert(e);
+
+
+    </script>
+</head>
+
+<body> </body>

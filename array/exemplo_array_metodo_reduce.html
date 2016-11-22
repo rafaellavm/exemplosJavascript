@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript: Array - Métodos Array - reduce </title>
+    <style type="text/css"></style>
+    <script type="text/javascript">
+
+        //esse método percorre cada um dos elementos de um array e executa uma função callback
+
+        // v1: valor anterior
+        // v2: valor corrente
+        // ind: índice de cada elemento
+        // arr: objeto Array sendo percorrido
+
+        var array = [1,4,7,15];
+
+        funcaoUm = function(v1,v2,ind,arr){
+
+            return v1+v2;
+        }
+
+        // Resultado: 0 + 1 = 1; 1 + 4 = 5; 5 + 7 = 12; 12+15 = 27
+        var x = array.reduce(funcaoUm);
+
+        // nesse caso colocamos o valor inicial igual a 100
+        // Resultado: 100 + 1 = 101; 101+4 = 105; 105+7 = 112; 112 + 15 = 127
+        var y = array.reduce(funcaoUm, 100);
+
+        alert(y);
+
+
+
+
+    </script>
+</head>
+
+<body> </body>

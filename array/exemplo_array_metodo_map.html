@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript: Array - Métodos Array - map </title>
+    <style type="text/css"></style>
+    <script type="text/javascript">
+
+        //esse método percorre cada um dos elementos de um array e modificá-lo conforme definido em uma função callback
+
+        // elem: o valor de cada elemento do array
+        // ind: índice de cada elemento
+        // obj: objeto Array sendo percorrido
+
+        var array = [21,3,18,290];
+
+        function funcaoUm(elem, ind, obj){
+
+            return (elem = elem*10);
+        }
+
+        var x = array.map(funcaoUm);
+
+        alert(x); //210,30,180,2900
+
+    </script>
+</head>
+
+<body> </body>

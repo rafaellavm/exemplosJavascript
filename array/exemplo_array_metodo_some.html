@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript: Array - Métodos Array - some </title>
+    <style type="text/css"></style>
+    <script type="text/javascript">
+
+        //Esse método percorre cada um dos elementos do array e executa uma função callback
+
+        var array = [21,3,18,'a',290];
+
+        // elem: o valor de cada elemento do array
+        // ind: índice de cada elemento
+        // obj: objeto Array sendo percorrido
+        function funcaoUm(elem, ind, obj){
+
+            return (typeof elem == 'string');
+        }
+
+        var x = array.some(funcaoUm);
+
+        //Retorna 'true', pois existe pelo menos elemento string no array
+        alert(x);
+
+    </script>
+</head>
+
+<body> </body>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Javascript: Array - Métodos Array - forEach </title>
+    <title>Javascript: Array - Métodos Array - every </title>
     <style type="text/css"></style>
     <script type="text/javascript">
 
@@ -15,18 +15,27 @@
 
         //a função percorre todos os elementos do array
 
-        var array = [21,3,18,"a", 290];
-
-        var msg = "";
+        var array = [21,3,18,290];
 
         function funcaoUm(elem, ind, obj){
 
-            msg += "arr[" + id + "] = " + elem + "\n";
+            return (typeof elem == 'number');
         }
 
-        arr.forEach(funcaoUm);
+        var x = array.every(funcaoUm); //retorna true pois só tem números no array
+        alert(x);
 
-        alert(msg);
+        //////////////////
+
+        var array2 = [21,3,18,'a',290];
+
+        function funcaoDois(elem, ind, obj){
+
+            return (typeof elem == 'number');
+        }
+
+        var y = array2.every(funcaoDois); //retorna false pois tem uma string no array
+        //alert(y);
 
     </script>
 </head>

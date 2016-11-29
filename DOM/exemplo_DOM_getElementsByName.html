@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript: DOM - getElementsByName </title>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+
+      //acessa o elemento DOM através do atributo NAME. Retorna um array
+
+        window.onload = function(){
+
+            var el = document.getElementsByName('xpto');
+            el[0].style.backgroundColor = "#FFFF00";
+            el[2].style.backgroundColor = "#00FF00";
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2 id="xpto">Título</h2>
+    <p>Texto do parágrafo</p>
+    <input type="text" name="xpto"/><br /><br />
+    <input type="text" name="xpto"/><br /><br />
+    <a name="xpto">Texto da âncora</a>
+</body>

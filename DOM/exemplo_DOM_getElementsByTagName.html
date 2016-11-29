@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript: DOM - getElementsByTagName </title>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+
+        //retorna todos os elementos do DOM do tipo definido no parâmetro TAG e retorna um array cujos itens fazem referências aos elementos desse tipo
+
+        //ele vai pegar todos os 'h2', colocar num array e atribuir as propriedades style específicas
+
+        window.onload = function(){
+
+            var titulosNivelDois = document.getElementsByTagName("h2");
+            titulosNivelDois[1].style.backgroundColor = '#FFFF00';
+            titulosNivelDois[2].style.color = '#FF0000';
+            titulosNivelDois[3].style.fontSize = '80px';
+        }
+
+    </script>
+</head>
+
+<body>
+    <h2>Método <code>getElementsByTagName()</code></h2>
+    <h2>Introdução</h2>
+    <p>Texto do parágrafo</p>
+    <h2 id="def">Definição</h2>
+    <p>Texto do parágrafo</p>
+    <h2 id="tipo">Tipos de DOM</h2>
+    <ul>
+        <li>DOM para html</li>
+        <li>DOM para xml</li>
+    </ul>
+</body>

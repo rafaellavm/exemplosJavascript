@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript: Array - DOM</title>
+    <style type="text/css"></style>
+
+</head>
+
+<body>
+    <form name="form1" action="http://livrojavascript.com.br" method="post" target="_blank">
+        <fieldset>
+            <legend>Formulário 1</legend>
+            <label for="nome">Nome:</label>
+            <br />
+            <input type="text" name="nome" id="nome" accept="text/plain" />
+            <br />
+            <br />
+            <label for="cidade">Cidade:</label>
+            <br />
+            <select title="Selecione uma cidade" name="cidade" id="cidade">
+                <option value="">Escolha uma cidade</option>
+                <option value="rio">Rio de Janeiro</option>
+                <option value="sp">São Paulo</option>
+            </select>
+            <br />
+            <br />
+            <label for="senha">Senha:</label>
+            <br />
+            <input type="password" name="senha" id="senha" />
+            <br />
+            <br />
+            <input type="submit" value="Enviar" /> </fieldset>
+    </form>
+    <div id="msg"></div>
+    <button type="button" id="reset">Reset</button>
+    <button type="button" id="submit">Submit</button>
+
+        <script type="text/javascript">
+
+        var el, msg, mensagem, btnReset, btnSubmit;
+        el = document.getElementsByTagName('form').form1;
+        btnReset = document.getElementById('reset');
+        btnSubmit = document.getElementById('submit');
+
+        btnReset.onclick = function(){
+
+            //método reset = simula o comportamento dos elementos html
+            el.reset();
+        }
+
+        btnSubmit.onclick = function(){
+
+            el.submit();
+        }
+
+    </script>
+</body>

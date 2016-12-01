@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript: Array - DOM</title>
+    <style type="text/css"></style>
+
+</head>
+
+<body>
+    <form name="form2" action="http://livrojavascript.com.br" method="post" target="_blank">
+        <fieldset> ... </fieldset>
+    </form>
+    <form name="form2" action="processa.php" method="get" target="_top">
+        <fieldset>
+            <legend>Formulário 2</legend>
+            Idade:
+            <br />
+            <input class="input" type="radio" title="Escolha uma opção" name="idade" id="menos30" value="menos30" />
+            <label for="menos30"> Menos de 30 anos</label>
+            <br />
+            <input class="input" type="radio" title="Escolha uma opção" name="idade" id="mais30" value="mais30" />
+            <label for="mais30"> Mais de 30 anos</label>
+            <br />
+        </fieldset>
+    </form>
+    <div id="msg"></div>
+    <button type="button" id="btn">Rodar Script</button>
+
+     <script type="text/javascript">
+       window.onload = function(){
+
+           var el, msg, mensagem, elBotao;
+
+           el = document.getElementsByTagName('form')['form2'];
+           msg = document.getElementById('msg');
+           elBotao = document.getElementById('btn');
+           mensagem += "<h3>Atributos do primeiro elemento <code>form</code> do documento</h3>";
+           mensagem += "<ul>";
+           mensagem += "<li>name=" + el.name + "</li>";
+           mensagem += "<li>action= " + el.action + "</li>";
+           mensagem += "<li>method= " + el.method + "</li>";
+           mensagem += "<li>target= " + el.target + "</li>";
+           mensagem += "</ul>";
+
+           elBotao.onclick = function(){
+
+               msg.innerHTML = mensagem;
+           }
+
+
+           //alert(el);
+       }
+    </script>
+</body>

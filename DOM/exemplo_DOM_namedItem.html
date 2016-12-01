@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript: DOM - namedItem </title>
+    <script type="text/javascript">
+        //namedItem retorna o nó da coleção html cujo identificador id tenha o valor defininido no parâmetro nome
+        //item (índice) retorna o nó da coleção html
+        var msg;
+        var para = document.getElementsByTagName("p");
+        var resultado = document.getElementById("resultado");
+        msg = '<ul>';
+        msg += '<li>Quantidade de parágrafos: ' + para.length + '</li>';
+        //msg += '<li>Texto do 2o.parágrafo: ' + para.item(1).innerHTML + '</li>';
+        //msg += '<li>Texto parágrafo com id="xpto": ' + para.namedItem("xpto").innerHTML + '</li>';
+        msg += '</ul>';
+        resultado.innerHTML = msg;
+
+
+    </script>
+</head>
+
+<body>
+    <p>Esse é o primeiro parágrafo</p>
+    <p>Esse é o segundo parágrafo</p>
+    <p id="xpto">Esse é o terceiro parágrafo</p>
+    <p>Esse é o quarto parágrafo</p>
+    <div id="resultado"></div>
+    <p>Arquivos exemplo: ...(parágrafo do template dos exemplos)</p>
+</body>
